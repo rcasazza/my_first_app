@@ -1,0 +1,18 @@
+<h1>Searching for - <%= @search_term %></h1>
+
+<table border="1">
+  <tr>
+    <th>Title</th>
+    <th>Publisher</th>
+    <th>Start Year</th>
+    <th>End Year</th>
+  </tr>
+  <% @essays.each do |essay| %>
+    <tr class=<%= cycle('even', 'odd') %>>
+      <td><%= essay["title"] %></td>
+      <td><%= essay["publisher"] %></td>
+      <td><%= essay["start_year"] %></td>
+      <td><%= essay["end_year"] %></td>
+    </tr>
+  <% end %>
+</table>
